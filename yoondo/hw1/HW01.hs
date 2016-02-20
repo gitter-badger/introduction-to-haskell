@@ -31,7 +31,7 @@ doubleEveryOther (x:y:zs) = x:2*y:doubleEveryOther zs
 -- Calculate the sum of all the digits in every Integer.
 sumDigits :: [Integer] -> Integer
 sumDigits [] = 0
-sumDigits (x:ys) = sum(toRevDigits x) + sumDigits ys
+sumDigits (x:ys) = lastDigit x + dropLastDigit x + sumDigits ys
 
 
 -- Exercise 5 -----------------------------------------
